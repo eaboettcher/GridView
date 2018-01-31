@@ -65,6 +65,13 @@ namespace GridView
             dtPerson.Rows.Add(null, "Buchanan", "Steven");
             dtPerson.Rows.Add(null, "Suyama", "Michael");
             dtPerson.Rows.Add(null, "Callahan", "Laura");
+            dtPerson.Rows.Add(null, "/*_*_//*", "Jo");
+            dtPerson.Rows.Add(null, "10941()", "Bob");
+            dtPerson.Rows.Add(null, "#@!%$^%", "Kim");
+            dtPerson.Rows.Add(null, "Johnson", "[]\\./,'");
+            dtPerson.Rows.Add(null, ";--.", "*//:&^");
+            dtPerson.Rows.Add(null, "99999", ">+++");
+            dtPerson.Rows.Add(null, ">_<;;", "¯\\_(*.*)_/¯");
 
             // Store the DataTable in ViewState. 
             ViewState["dtPerson"] = dtPerson;
@@ -132,7 +139,7 @@ namespace GridView
                 // Get the PersonID of the selected row.
                 string strPersonID = gvPerson.Rows[e.RowIndex].Cells[2].Text;
 
-                // Find the row in DateTable.
+                // Find the row in DataTable.
                 DataRow drPerson = dtPerson.Rows.Find(strPersonID);
 
                 // Retrieve edited values and updating respective items.
