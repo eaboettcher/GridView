@@ -137,7 +137,7 @@ namespace GridView
                 DataTable dtPerson = (DataTable)ViewState["dtPerson"];
 
                 // Get the PersonID of the selected row.
-                string strPersonID = gvPerson.Rows[e.RowIndex].Cells[2].Text;
+                object strPersonID = gvPerson.Rows[e.RowIndex].Cells[2].Text;
 
                 // Find the row in DataTable.
                 DataRow drPerson = dtPerson.Rows.Find(strPersonID);
